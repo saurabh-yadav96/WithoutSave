@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "swastik.keystore",
+            "storePassword": "Iamfunny0606",
+            "alias": "swastik",
+            "password": "Iamfunny0606",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "swastik.keystore",
+            "storePassword": "Iamfunny0606",
+            "alias": "swastik",
+            "password": "Iamfunny0606",
+            "keystoreType": ""
+        }
+    }
+}

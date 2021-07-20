@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <title>Without Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="card-title">Without Save</h1>
+            <small class="card-subtitle">Chat on Whatsapp without saving a number</small>
+            <div class="card-form">
+                <label for="username">Number</label>
+                <div class="card-input-container username">
+                    <input type="telephone" placeholder="Enter Mobile Number" id="mobile">
+                </div>
+
+                <button class="card-button" onclick="chat()">Continue to chat</button>
+
+                <center><small>WithoutSave&#169 by Saurabh Yadav</small></center>
+            </div>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script type="text/javascript">
+        // document.addEventListener('deviceready', function () {
+        //     cordova.InAppBrowser.open('https://api.whatsapp.com/send/?phone=%2B919039411468&text&app_absent=0', '_system', 'location=no,toolbar=no');
+        // });
+
+      function  chat(){
+          var mobile = document.getElementById('mobile').value;
+          if(mobile.match(/^\d{10}$/))
+		  {
+            cordova.InAppBrowser.open('https://api.whatsapp.com/send/?phone=%2B91'+mobile+'&text&app_absent=0', '_system', 'location=no,toolbar=no');
+          }
+          else
+          {
+              alert("Please enter a valid mobile number!!");
+          }
+        }
+    </script>
+</body>
+
+</html>
